@@ -1,13 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-.test{
+.circle {
     width: 100px;
-    height: 150px;
-    border: 2.5px solid #111;
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 10px auto;
-    overflow-x: scroll;
+    height: 100px;
+    border: 2px solid #343434;
+    border-radius: 50%;
+    margin: 30px auto 0;
 }
+
+.color_controller {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.color_controller input {
+    border: 2px solid #343434;
+    text-align: center;
+    background: #9ff;
+    font-weight: 600;
+}
+

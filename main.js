@@ -1,9 +1,22 @@
 "use strict"
 
-let div = document.querySelector('div');
+Vue.component('vCircle', {
+    template : `<div class="circle" :style = "{background : $refs.colorController.color}"></div>
+                `,
+});
 
-function scrollbottom(el) {
-    return el.scrollHeight - el.scrollTop - el.clientHeight
-}
+Vue.component('vColorController', {
+    template : `<div class="color_controller">
+                    <input type="text" v-model = "$parent.color">
+                </div>
+                `,
+    data () {
+        return {
+            color: '',
+        }
+    },
+});
 
-scrollbottom(div);
+let test = new Vue({
+    el: '#vmApp',
+});
